@@ -33,7 +33,7 @@ new class extends Component {
 
 <x-layouts.guest>
 
-    <h1 class="text-center text-3xl">@lang('pages.register.title')</h1>
+    <x-partials.auth-heading :text="__('pages.register.title')"/>
 
     <x-forms.error-bag/>
 
@@ -57,10 +57,7 @@ new class extends Component {
 
         </x-ui.button>
 
-        @if(Route::has('login'))
-            <a href="{{route('login')}}" wire:navigate class="link mt-4 text-center">
-                @lang('pages.register.login')
-            </a>
-        @endif
+        <x-partials.auth-link href="{{route('login')}}" :text="__('pages.register.login')"/>
+
     </form>
 </x-layouts.guest>
