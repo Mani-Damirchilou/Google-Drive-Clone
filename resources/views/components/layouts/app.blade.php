@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{str_replace('_','-',app()->getLocale())}}" dir="rtl">
+<html lang="{{str_replace('_','-',app()->getLocale())}}" dir="rtl" x-cloak x-data :data-theme="$store.darkMode.on ? 'dark': 'light'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
