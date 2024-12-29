@@ -26,6 +26,8 @@ new class extends Component {
 
         $this->form->reset();
 
+        $this->notify('success',__('notifications.register-success'));
+
         $this->redirectRoute('index', navigate: true);
     }
 

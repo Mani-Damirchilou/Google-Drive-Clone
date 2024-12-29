@@ -35,6 +35,7 @@ new class extends Component {
         RateLimiter::clear($this->form->email);
         session()->regenerate();
         $this->form->reset();
+        $this->notify('success',__('notifications.login-success'));
         $this->redirectIntended(navigate: true);
     }
 
