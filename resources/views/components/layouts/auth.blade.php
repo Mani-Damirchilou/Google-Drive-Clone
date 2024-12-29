@@ -25,7 +25,7 @@
 
             </div>
         </nav>
-        <main class="bg-base-300">
+        <main class="bg-base-200 h-full">
             {{$slot}}
         </main>
     </div>

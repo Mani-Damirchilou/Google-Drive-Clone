@@ -25,7 +25,7 @@ new class extends Component {
                placeholder="{{__('components.search.placeholder')}}" @blur="$wire.emptySearch()">
     </label>
     @if($search)
-        <div class="card card-compact bg-base-200" x-anchor.offset.10="$refs.search">
+        <div class="card card-compact bg-base-100" x-anchor.offset.10="$refs.search">
             <div class="card-body flex flex-col">
                 <ul class="menu">
                     @forelse($folders as $folder)
