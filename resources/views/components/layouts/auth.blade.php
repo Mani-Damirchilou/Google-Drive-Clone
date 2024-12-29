@@ -1,7 +1,7 @@
 <div class="drawer" :class="{'lg:drawer-open': open}" x-data="{open: $persist(true)}">
     <input id="sidebar" type="checkbox" class="drawer-toggle"/>
     <div class="drawer-content flex flex-col">
-        <nav class="navbar bg-base-300 flex flex-col justify-center sticky top-0 gap-4 py-4">
+        <nav class="navbar z-50 bg-base-300 flex flex-col justify-center sticky top-0 gap-4 py-4">
             <div class="flex justify-between w-full">
                 <div class="w-full gap-4 flex items-center">
                     <label for="sidebar" class="lg:hidden btn">
