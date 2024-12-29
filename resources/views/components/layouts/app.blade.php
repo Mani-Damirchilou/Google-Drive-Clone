@@ -9,6 +9,7 @@
     <title>{{$title ?? 'Page title'}}</title>
 </head>
 <body>
+<x-ui.notification/>
 {{$slot}}
 @livewireScripts
 </body>
