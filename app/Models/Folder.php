@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,5 +26,15 @@ class Folder extends Model
     public function children()
     {
         return $this->hasMany(Folder::class,'parent_id');
+    }
+
+    public function getCreatedAtFarsiAttribute()
+    {
+        return (new Verta($this->created_at))->format('D, d M Y - h:i a');
+    }
+
+    public function getUpdatedAtFarsiAttribute()
+    {
+        return (new Verta($this->updated_at))->formatDifference();
     }
 }

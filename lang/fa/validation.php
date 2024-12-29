@@ -188,7 +188,9 @@ return [
         'password' => 'رمز عبور',
         'password_confirmation' => 'تاییدیه رمز عبور',
         'phone_number' => 'شماره تلفن',
-        'remember' => 'منو به خاطر بسپار'
+        'remember' => 'منو به خاطر بسپار',
+        'created_at' => 'تاریخ ساخت',
+        'updated_at' => 'آخرین بروزرسانی'
     ],
 
 ];
