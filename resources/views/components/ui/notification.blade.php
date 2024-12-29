@@ -1,7 +1,7 @@
 @persist('notification')
-<div class="toast toast-start"
+<div class="toast toast-start z-50"
      x-data="{notifications: [],addNotification(notification){ this.notifications.push(notification); },removeNotification(notification){ this.notifications = this.notifications.filter(n => n.id !== notification.id) } }"
-     x-on:notify.window="addNotification($event.detail);setTimeout(() => removeNotification($event.detail),3000)">
+     x-on:notify.window="addNotification($event.detail);setTimeout(() => removeNotification($event.detail),5000)">
     <template x-for="notification in notifications" :key="notification.id">
         <div class="alert border cursor-pointer" @click="removeNotification(notification)"
              :class="{
