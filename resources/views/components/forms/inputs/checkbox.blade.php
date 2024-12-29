@@ -3,7 +3,9 @@
 ])
 <div {{$attributes->merge(['class' => 'form-control'])}}>
     <label class="label cursor-pointer">
-        <span class="label-text">{{$label}}</span>
-        <input type="checkbox" checked="checked" class="checkbox" {{$attributes->except(['class'])}}/>
+        @isset($label)
+            <span class="label-text">{{$label}}</span>
+        @endisset
+        <input type="checkbox" class="checkbox" {{$attributes->except(['class'])}}/>
     </label>
 </div>
