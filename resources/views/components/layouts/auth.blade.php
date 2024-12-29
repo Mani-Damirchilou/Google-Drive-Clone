@@ -1,7 +1,7 @@
 <div class="drawer" :class="{'lg:drawer-open': open}" x-data="{open: $persist(true)}">
     <input id="sidebar" type="checkbox" class="drawer-toggle"/>
     <div class="drawer-content flex flex-col">
-        <nav class="navbar bg-base-300 flex flex-col sticky top-0">
+        <nav class="navbar bg-base-300 flex flex-col justify-center sticky top-0 gap-4 py-4">
             <div class="flex justify-between w-full">
                 <div class="w-full gap-4 flex items-center">
                     <label for="sidebar" class="lg:hidden btn">
@@ -22,7 +22,7 @@
                 <x-ui.theme-switch class="btn btn-ghost bg-base-200"/>
             </div>
             <div class="flex justify-between w-full">
-
+                <x-ui.breadcrumb/>
             </div>
         </nav>
         <main class="bg-base-200 h-full">
